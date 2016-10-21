@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  WYNews
+//
+//  Created by 姚乐 on 16/10/21.
+//  Copyright © 2016年 yaole. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+
+
+#ifdef DEBUG
+#define YaoLog(...) NSLog(__VA_ARGS__)
+#else
+#endif
+
+#import "UIView+frame.h"
+
+//http://c.m.163.com//nc/article/headline/T1348647853363/0-20.html 新闻
+//http://c.m.163.com//nc/article/headline/T1348647853363/20-20.html
+
+//http://c.m.163.com//nc/article/list/T1348649145984/0-20.html NBA
