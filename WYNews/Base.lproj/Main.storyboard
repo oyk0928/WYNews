@@ -25,6 +25,9 @@
                             </scrollView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rzl-MQ-k3Y">
                                 <rect key="frame" x="0.0" y="104" width="375" height="514"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2Q0-ZF-NrB"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -38,7 +41,19 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rzl-MQ-k3Y" secondAttribute="bottom" id="zVx-bd-Mru"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="slt-DU-Byn"/>
+                    <navigationItem key="navigationItem" id="slt-DU-Byn">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="ewQ-Ft-GSX">
+                            <rect key="frame" x="152.5" y="-3" width="70" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="11111" translatesAutoresizingMaskIntoConstraints="NO" id="vkB-LA-V5w">
+                                    <rect key="frame" x="0.0" y="5" width="70" height="32"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="bigScrollVIew" destination="Rzl-MQ-k3Y" id="UvD-QB-rWT"/>
@@ -55,9 +70,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qnN-QS-PBc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="UQK-5G-Txx"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Ax-DV-q4L">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="11111" id="8Ax-DV-q4L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.15402242820000001" blue="0.15141529889999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -87,4 +103,7 @@
             <point key="canvasLocation" x="-228" y="288"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="11111" width="70" height="33"/>
+    </resources>
 </document>

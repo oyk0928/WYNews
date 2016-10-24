@@ -10,4 +10,7 @@
 
 @interface TitleLabel : UILabel
 
+@property (nonatomic,assign)CGFloat scale;
+
+
 @end

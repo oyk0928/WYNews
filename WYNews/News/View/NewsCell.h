@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewsModel.h"
 
 @interface NewsCell : UITableViewCell
+@property (nonatomic,strong)NewsModel* model;
+
 
 @end
