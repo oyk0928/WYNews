@@ -35,6 +35,12 @@
 		E57909CB1DBA02AC00911C06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57909C91DBA02AC00911C06 /* Main.storyboard */; };
 		E57909CD1DBA02AC00911C06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E57909CC1DBA02AC00911C06 /* Assets.xcassets */; };
 		E57909D01DBA02AC00911C06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57909CE1DBA02AC00911C06 /* LaunchScreen.storyboard */; };
+		E5CBBA9F1DBE666700190920 /* VideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CBBA9E1DBE666700190920 /* VideoModel.m */; };
+		E5CBBAA21DBE687C00190920 /* VideoComment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CBBAA11DBE687C00190920 /* VideoComment.m */; };
+		E5CBBAA51DBE68B200190920 /* VideoUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CBBAA41DBE68B200190920 /* VideoUser.m */; };
+		E5CBBAAA1DBE6AE900190920 /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CBBAA91DBE6AE900190920 /* VideoPlayer.m */; };
+		E5CBBAAE1DBE6B1700190920 /* VideoPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5CBBAAD1DBE6B1700190920 /* VideoPlayer.xib */; };
+		E5CBBAB31DBF24F600190920 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CBBAB21DBF24F600190920 /* VideoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +97,17 @@
 		E57909CC1DBA02AC00911C06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E57909CF1DBA02AC00911C06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E57909D11DBA02AC00911C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5CBBA9D1DBE666700190920 /* VideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoModel.h; sourceTree = "<group>"; };
+		E5CBBA9E1DBE666700190920 /* VideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoModel.m; sourceTree = "<group>"; };
+		E5CBBAA01DBE687C00190920 /* VideoComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoComment.h; sourceTree = "<group>"; };
+		E5CBBAA11DBE687C00190920 /* VideoComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoComment.m; sourceTree = "<group>"; };
+		E5CBBAA31DBE68B200190920 /* VideoUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoUser.h; sourceTree = "<group>"; };
+		E5CBBAA41DBE68B200190920 /* VideoUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoUser.m; sourceTree = "<group>"; };
+		E5CBBAA81DBE6AE900190920 /* VideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayer.h; sourceTree = "<group>"; };
+		E5CBBAA91DBE6AE900190920 /* VideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayer.m; sourceTree = "<group>"; };
+		E5CBBAAD1DBE6B1700190920 /* VideoPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoPlayer.xib; sourceTree = "<group>"; };
+		E5CBBAB11DBF24F600190920 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		E5CBBAB21DBF24F600190920 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +257,7 @@
 		E57909BF1DBA02AC00911C06 /* WYNews */ = {
 			isa = PBXGroup;
 			children = (
+				E5CBBA9A1DBE65CA00190920 /* Video */,
 				E570F7B11DBAA7B200A4A9F6 /* Tool */,
 				E570F77F1DBA3D2C00A4A9F6 /* Category */,
 				E570F7751DBA228300A4A9F6 /* News */,
@@ -266,6 +284,48 @@
 				E570F7891DBA5D6400A4A9F6 /* Header.h */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E5CBBA9A1DBE65CA00190920 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				E5CBBAA71DBE6AC700190920 /* VideoPlayer */,
+				E5CBBAA61DBE69DC00190920 /* Controller */,
+				E5CBBA9C1DBE65F300190920 /* Model */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		E5CBBA9C1DBE65F300190920 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5CBBA9D1DBE666700190920 /* VideoModel.h */,
+				E5CBBA9E1DBE666700190920 /* VideoModel.m */,
+				E5CBBAA01DBE687C00190920 /* VideoComment.h */,
+				E5CBBAA11DBE687C00190920 /* VideoComment.m */,
+				E5CBBAA31DBE68B200190920 /* VideoUser.h */,
+				E5CBBAA41DBE68B200190920 /* VideoUser.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E5CBBAA61DBE69DC00190920 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E5CBBAB11DBF24F600190920 /* VideoViewController.h */,
+				E5CBBAB21DBF24F600190920 /* VideoViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E5CBBAA71DBE6AC700190920 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				E5CBBAA81DBE6AE900190920 /* VideoPlayer.h */,
+				E5CBBAA91DBE6AE900190920 /* VideoPlayer.m */,
+				E5CBBAAD1DBE6B1700190920 /* VideoPlayer.xib */,
+			);
+			path = VideoPlayer;
 			sourceTree = "<group>";
 		};
 		ECE7724696FC3FAFC33EBDCB /* Frameworks */ = {
@@ -341,6 +401,7 @@
 				E57909CD1DBA02AC00911C06 /* Assets.xcassets in Resources */,
 				E57909CB1DBA02AC00911C06 /* Main.storyboard in Resources */,
 				E570F7741DBA1D6800A4A9F6 /* NewsURLs.plist in Resources */,
+				E5CBBAAE1DBE6B1700190920 /* VideoPlayer.xib in Resources */,
 				E54F301C1DBD009500E4888E /* SXDetails.css in Resources */,
 				E570F7881DBA546D00A4A9F6 /* HYQiHei-50J.ttf in Resources */,
 				E570F77B1DBA22F200A4A9F6 /* NewsTableview.storyboard in Resources */,
@@ -403,22 +464,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				E570F77E1DBA363300A4A9F6 /* TitleLabel.m in Sources */,
+				E5CBBAA21DBE687C00190920 /* VideoComment.m in Sources */,
 				E54F301A1DBCFE5200E4888E /* NewsDetailImgModel.m in Sources */,
 				E54F300A1DBC8FC600E4888E /* NewsDetailViewController.m in Sources */,
 				E570F7791DBA22DC00A4A9F6 /* NewsTableViewController.m in Sources */,
 				E54F30221DBE1F4200E4888E /* PhotoSetModel.m in Sources */,
+				E5CBBA9F1DBE666700190920 /* VideoModel.m in Sources */,
 				E57909C81DBA02AC00911C06 /* ViewController.m in Sources */,
 				E54F30251DBE1F5000E4888E /* PhotoModel.m in Sources */,
 				E570F7B71DBAF13400A4A9F6 /* CellFrameModel.m in Sources */,
 				E57909C51DBA02AC00911C06 /* AppDelegate.m in Sources */,
+				E5CBBAA51DBE68B200190920 /* VideoUser.m in Sources */,
 				E570F7B41DBAA81500A4A9F6 /* NetworkTool.m in Sources */,
 				E570F7B01DBA75C600A4A9F6 /* NewsModel.m in Sources */,
 				E570F76F1DBA0E5800A4A9F6 /* TabBarBtn.m in Sources */,
+				E5CBBAB31DBF24F600190920 /* VideoViewController.m in Sources */,
 				E54F301F1DBE121600E4888E /* ShowPicViewController.m in Sources */,
 				E570F7861DBA4B2300A4A9F6 /* NewsCell.m in Sources */,
 				E570F7671DBA048900A4A9F6 /* MainTabBarController.m in Sources */,
 				E570F7721DBA1BB000A4A9F6 /* MainViewController.m in Sources */,
 				E570F76A1DBA04C900A4A9F6 /* YAOTabBar.m in Sources */,
+				E5CBBAAA1DBE6AE900190920 /* VideoPlayer.m in Sources */,
 				E54F30171DBCF74F00E4888E /* NewsDetailModel.m in Sources */,
 				E570F7821DBA3D6E00A4A9F6 /* UIView+frame.m in Sources */,
 				E57909C21DBA02AC00911C06 /* main.m in Sources */,

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VideoPlayer">
+            <rect key="frame" x="0.0" y="0.0" width="451" height="279"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_media_default" translatesAutoresizingMaskIntoConstraints="NO" id="Xgq-g7-8ef">
+                    <rect key="frame" x="0.0" y="0.0" width="451" height="279"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="h9i-ZC-5W0" appends="YES" id="WFx-dq-ZbR"/>
+                    </connections>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jV-gB-QiQ">
+                    <rect key="frame" x="0.0" y="229" width="451" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeR-SI-ATF">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="SIn-hQ-Egt"/>
+                            </constraints>
+                            <state key="normal" image="full_play_btn_hl"/>
+                            <connections>
+                                <action selector="playPauseBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="wfw-3d-btQ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlb-xC-k5r">
+                            <rect key="frame" x="401" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="RfW-T6-nrc"/>
+                            </constraints>
+                            <state key="normal" image="player_fullscreen">
+                                <color key="titleShadowColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="fullScreenBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="dLR-Ub-9pd"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:20/23:30" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie4-If-170">
+                            <rect key="frame" x="302" y="14" width="94" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NJL-Gq-Onj">
+                            <rect key="frame" x="53" y="10" width="246" height="31"/>
+                            <connections>
+                                <action selector="slider" destination="iN0-l3-epB" eventType="touchUpInside" id="ZZS-N3-tdz"/>
+                                <action selector="sliderValueChanged" destination="iN0-l3-epB" eventType="valueChanged" id="M04-mr-4Ir"/>
+                                <action selector="startSlider" destination="iN0-l3-epB" eventType="touchDown" id="Pzy-Xd-aVE"/>
+                            </connections>
+                        </slider>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="FeR-SI-ATF" firstAttribute="leading" secondItem="7jV-gB-QiQ" secondAttribute="leading" id="1dV-iB-glC"/>
+                        <constraint firstAttribute="bottom" secondItem="Tlb-xC-k5r" secondAttribute="bottom" id="6Qe-JO-0nB"/>
+                        <constraint firstItem="NJL-Gq-Onj" firstAttribute="centerY" secondItem="7jV-gB-QiQ" secondAttribute="centerY" id="6Tc-9e-i29"/>
+                        <constraint firstItem="Tlb-xC-k5r" firstAttribute="leading" secondItem="ie4-If-170" secondAttribute="trailing" constant="5" id="MlI-Zk-Hso"/>
+                        <constraint firstItem="ie4-If-170" firstAttribute="leading" secondItem="NJL-Gq-Onj" secondAttribute="trailing" constant="5" id="Mx5-zC-0Ij"/>
+                        <constraint firstItem="Tlb-xC-k5r" firstAttribute="top" secondItem="7jV-gB-QiQ" secondAttribute="top" id="NB5-Fg-U8o"/>
+                        <constraint firstAttribute="bottom" secondItem="FeR-SI-ATF" secondAttribute="bottom" id="UGV-Ic-U6A"/>
+                        <constraint firstItem="FeR-SI-ATF" firstAttribute="top" secondItem="7jV-gB-QiQ" secondAttribute="top" id="ZAf-jz-1ko"/>
+                        <constraint firstItem="NJL-Gq-Onj" firstAttribute="leading" secondItem="FeR-SI-ATF" secondAttribute="trailing" constant="5" id="hgE-1b-7rS"/>
+                        <constraint firstAttribute="trailing" secondItem="Tlb-xC-k5r" secondAttribute="trailing" id="v0N-aF-70H"/>
+                        <constraint firstAttribute="height" constant="50" id="y0Z-Qf-b1q"/>
+                        <constraint firstItem="ie4-If-170" firstAttribute="centerY" secondItem="7jV-gB-QiQ" secondAttribute="centerY" id="z0n-se-Ab3"/>
+                    </constraints>
+                </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hZw-wP-q8a">
+                    <rect key="frame" x="207" y="121" width="37" height="37"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="7jV-gB-QiQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2Vh-Yn-4Ld"/>
+                <constraint firstItem="Xgq-g7-8ef" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AHE-ag-OoV"/>
+                <constraint firstAttribute="bottom" secondItem="Xgq-g7-8ef" secondAttribute="bottom" id="FqB-jS-emo"/>
+                <constraint firstItem="Xgq-g7-8ef" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="L9v-fu-fU8"/>
+                <constraint firstAttribute="trailing" secondItem="7jV-gB-QiQ" secondAttribute="trailing" id="OrY-aN-wxc"/>
+                <constraint firstAttribute="trailing" secondItem="Xgq-g7-8ef" secondAttribute="trailing" id="QRX-eD-gfb"/>
+                <constraint firstAttribute="bottom" secondItem="7jV-gB-QiQ" secondAttribute="bottom" id="jEt-YK-NAb"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="fullScreenBtn" destination="Tlb-xC-k5r" id="h4g-uh-HVW"/>
+                <outlet property="imageView" destination="Xgq-g7-8ef" id="Azs-LU-Dyw"/>
+                <outlet property="playPauseBtn" destination="FeR-SI-ATF" id="Usc-qr-8RU"/>
+                <outlet property="progressSlider" destination="NJL-Gq-Onj" id="Skp-Jh-Qwk"/>
+                <outlet property="progressView" destination="hZw-wP-q8a" id="59F-tm-Mar"/>
+                <outlet property="timeLabel" destination="ie4-If-170" id="agS-t4-5GA"/>
+                <outlet property="toolView" destination="7jV-gB-QiQ" id="PED-GR-gdo"/>
+            </connections>
+            <point key="canvasLocation" x="392.5" y="46.5"/>
+        </view>
+        <tapGestureRecognizer id="h9i-ZC-5W0">
+            <connections>
+                <action selector="tapAction:" destination="iN0-l3-epB" id="D3x-Is-UaZ"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="bg_media_default" width="320" height="180"/>
+        <image name="full_play_btn_hl" width="50" height="50"/>
+        <image name="player_fullscreen" width="20" height="20"/>
+    </resources>
+</document>

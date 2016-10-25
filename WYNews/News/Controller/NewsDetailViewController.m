@@ -32,8 +32,6 @@
         YaoLog(@"%@",self.newsDetailModel);
         [self.webView loadHTMLString:[self getHtmlString] baseURL:nil];
         [self.view addSubview:self.webView];
-        [self.webView setFrame:self.view.frame];
-        self.webView.y = 64;
         [self.navigationController setToolbarHidden:YES];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -47,7 +45,7 @@
 
 -(UIWebView *)webView {
     if (_webView == nil) {
-        _webView = [[UIWebView alloc]init];//WithFrame:CGRectMake(0, 0, 375, 600)
+        _webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 64, self.view.width,self.view.height - 64 -44 )];
     }
     return _webView;
 }
